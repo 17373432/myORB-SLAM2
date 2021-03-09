@@ -111,3 +111,7 @@ add_executable(mono_euroc
 Examples/Monocular/mono_euroc.cc)
 target_link_libraries(mono_euroc ${PROJECT_NAME})
 
+#生成调用摄像头可执行文件
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
+add_executable(myslam myslam.cpp)
+target_link_libraries(myslam ${PROJECT_NAME})
